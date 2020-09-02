@@ -1,13 +1,148 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+
+#content {
+  width: 100%;
+  height: 100vh;
+  font-family: 'Bad Script', cursive, sans-serif, arial;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#white-board {
+  background-color: #f2f2f2;
+  position: relative;
+  width: 80%;
+  max-width: 900px;
+  min-width: 340px;
+  min-height: 80%;
+  margin: 10px auto 10px auto;
+  padding: 5px 0px 5px 0px;
+  border-radius: 5px;
+  border: 10px solid #adb2bd;
+  box-shadow: inset -1px 2px 2px #404040, 6px 9px 1px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.text {
+  font-size: 1.5em;
+  color: #1f75fe;
+  font-weight: bold;
+  text-align: center;
+}
+
+.taskText {
+  width: 265px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.tasksBlock {
+  width: 340px;
+}
+
+.finished {
+  color: rgb(170, 170, 170);
+}
+
+.input {
+  width: 260px;
+  margin-right: 10px;
+  border: none;
+  background-color: #fcf59b;
+  font-family: 'Bad Script', cursive, sans-serif, arial;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 0px;
+}
+
+.input:focus {
+  border: none;
+  outline: 0px;
+}
+
+.buttons {
+  border: none;
+  background-color: #fcf59b;
+  outline: none !important;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.icons {
+  font-size: 20px;
+  transition: transform .2s;
+}
+
+.icons:hover {
+  transform: scale(1.2);
+}
+
+.inputSticker {
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  display: flex;
+  justify-content: space-around;
+}
+
+.tasksContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 940px) {
+  .tasksContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.sticker {
+  display: flex;
+  position: relative;
+  width: 335px;
+  height: 70px;
+  margin: 5px 2px;
+  font-weight: bold;
+  background-color: #fcf59b;
+  border-radius: 0px 10px 250px / 0 200px 55px 250px;
+  -webkit-box-shadow: -3px 5px 12px 0 rgba(0,0,0,0.3);
+  -moz-box-shadow: -3px 5px 12px 0 rgba(0,0,0,0.3);
+  box-shadow: -3px 5px 12px 0 rgba(0,0,0,0.3);
+}
+
+.sticker-content {
+  margin: auto;
+  text-align: center;
+}
+
+.sticker::before {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 90%;
+  height: 20px;
+  -webkit-box-shadow: 3px 17px 6px rgba(0,0,0,.3);
+  -moz-box-shadow: 3px 17px 6px rgba(0,0,0,.3);
+  box-shadow: 3px 17px 6px rgba(0,0,0,.3);
+  bottom: 15px;
+  right: 5px;
+  -ms-transform: skew(-10deg,2deg);
+  -webkit-transform: skew(-10deg,2deg);
+  transform: skew(-10deg,2deg);
+}
+
+.sticker::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0; 
+  height: 0;
+  right: 8px;
+  bottom: 1px;
+  border-top: 10px solid rgb(156, 166, 61); 
+  border-right: 10px solid transparent;
+  -webkit-transform: skew(-55deg,10deg);
+  transform: skew(-55deg,10deg);
 }
