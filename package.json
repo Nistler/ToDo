@@ -1,6 +1,7 @@
 {
   "name": "todo",
   "version": "0.1.0",
+  "homepage": "https://nistler.github.io/ToDo/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -14,10 +15,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
@@ -32,6 +32,8 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^3.1.0",
+    "prettier": "2.1.1",
     "webpack": "^4.42.0",
     "webpack-cli": "^3.3.12"
   }
