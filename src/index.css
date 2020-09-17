@@ -1,12 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Bad+Script&display=swap");
-
-#content {
+.content {
   width: 100%;
   height: 100vh;
   font-family: "Bad Script", cursive, sans-serif, arial;
 }
 
-#white-board {
+.white-board {
   background-color: #f2f2f2;
   position: relative;
   width: 80%;
@@ -61,17 +59,20 @@
 .buttons {
   border: none;
   background-color: #fcf59b;
-  outline: none !important;
+  outline: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .icons {
   font-size: 20px;
   transition: transform 0.2s;
+  -webkit-transition: transform 0.2s;
 }
 
 .icons:hover {
   transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
 }
 
 .inputSticker {
@@ -88,13 +89,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-}
-
-@media screen and (max-width: 940px) {
-  .tasksContainer {
-    flex-direction: column;
-    align-items: center;
-  }
 }
 
 .sticker {
@@ -143,18 +137,19 @@
   bottom: 1px;
   border-top: 10px solid rgb(156, 166, 61);
   border-right: 10px solid transparent;
+  -ms-transform: skew(-55deg, 10deg);
   -webkit-transform: skew(-55deg, 10deg);
   transform: skew(-55deg, 10deg);
-}
-
-.chika {
-  position: absolute;
-  bottom: 0px;
-  width: -webkit-fill-available;
-  max-width: 520px;
 }
 
 #tasksContent {
   display: flex;
   justify-content: center;
+}
+
+@media screen and (max-width: 940px) {
+  .tasksContainer {
+    flex-direction: column;
+    align-items: center;
+  }
 }

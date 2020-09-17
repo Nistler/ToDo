@@ -3,6 +3,7 @@ import React, { Component } from "react";
 export default class Item extends Component {
   render() {
     const { task, changeStatus, onRemove, isActive } = this.props;
+
     return (
       <div className="sticker">
         <div className="sticker-content">
