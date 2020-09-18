@@ -14,7 +14,7 @@ A simple ToDo app built with React.js
 
 ```
 $ git clone https://github.com/Nistler/ToDo
-$ cd react-todolist
+$ cd ToDo
 $ npm install
 $ npm start
 ```
